@@ -1,0 +1,6 @@
+﻿  Source.cpp
+C:\Users\machi\source\repos\gg\gg\Source.cpp(12,9): warning C4473: "printf": no se pasaron suficientes argumentos para la cadena de formato
+C:\Users\machi\source\repos\gg\gg\Source.cpp(12,9): message : los marcadores de posición y sus parámetros esperan 1 argumentos variádicos, pero se proporcionaron 0
+C:\Users\machi\source\repos\gg\gg\Source.cpp(12,9): message : el argumento variádico 1 que falta es requerido por la cadena de formato '%d'
+C:\Users\machi\source\repos\gg\gg\Source.cpp(8,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\machi\source\repos\gg\gg\Source.cpp(10,2): error C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
