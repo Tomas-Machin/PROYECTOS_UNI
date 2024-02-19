@@ -1,0 +1,63 @@
+% CODIGO PROLOG
+
+% REGLAS DEL JUEGO:
+
+% 1.- Se escogen 4 números, cada usuario elige 2.
+%     De esos números, los primeros 2 tienen que estar comprendidos
+%     entre 0 y 10, los otros 2 deberán estar comprendidos entre 0 y 5.
+
+% 2.- El primer numero elegido por cada usuario es su objetivo a
+%     acercarse.
+
+% 3.- El segundo de los numeros q escogen los eligen al mismo tiempo de
+%     entre un número del 1 al 5 y se sumaran dando lugar a un número
+%     entre el 1 y 10.
+
+% 4.- Ganará el jugador que mas se acerque el número sumado al primer
+%     número que eligieron pero, en caso de pasarse el jugador que tiene
+%     un número más pequeño que la suma habrá perdido.
+
+% 5.- El juego esta basado con respecto a la variable X, es decir, eres
+% el jugador X (por asi decirlo).
+
+% CASOS BASE EN EL Q UN JUGADOR ELIGE EL NUMERO 0
+% numeros(X, 0, Z, W):-
+%   write('¡¡¡HAS GANADOO!!!').
+
+%numeros(0, Y, Z, W):-
+%    write('Has perdido...').
+
+numeros(X, Y, Z, W):-
+    %%num(X),
+    %num(Y),
+    %\+  X = Y,
+    \+ X > 10,
+    \+ Y > 10,
+    \+ Z > 5,
+    \+ W > 5,
+    T is Z + W,
+    diferencia(X, Y, T).
+
+% calcula la diferencia del resultado con los numeros a acercarse y los
+% manda comparar
+diferencia(X, Y, T):-
+    D1 is abs(X - T),
+    D2 is abs(Y - T),
+    comparar(D1, D2).
+
+% compara las diferencias para determinar el mas cercanoy por tanto al
+% ganador
+comparar(D1, D2):-
+    D1 < D2, % GANA
+    write('¡¡¡HAS GANADOO!!!').
+
+comparar(D1, D2):-
+   D1 > D2, % PIERDE
+   write('Has perdido...').
+
+comparar(D1, D2):-
+    D1 = D2,
+    write('Empate').
+
+% ¿QUE OCURRE CUANDO SOBREPASA LOS DOS NUMEROS? -- GANA EL DEL NUMERO
+% MAS GRANDE

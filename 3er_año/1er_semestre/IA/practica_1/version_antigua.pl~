@@ -1,0 +1,126 @@
+
+% CODIGO PROLOG
+
+% REGLAS DEL JUEGO:
+
+% 1.- Se escogen 4 números, cada usuario elige 2.
+%     De esos números, los primeros 2 tienen que estar comprendidos
+%     entre 0 y 10, los otros 2 deberán estar comprendidos entre 0 y 5.
+
+% 2.- El primer numero elegido por cada usuario es su objetivo a
+%     acercarse.
+
+% 3.- El segundo de los numeros q escogen los eligen al mismo tiempo de
+%     entre un número del 1 al 5 y se sumaran dando lugar a un número
+%     entre el 1 y 10.
+
+% 4.- Ganará el jugador que mas se acerque el número sumado al primer
+%     número que eligieron.
+
+% 5.- El juego esta basado con respecto a la variable X, es decir, eres
+% el jugador X (por asi decirlo).
+
+% CASOS BASE EN EL Q UN JUGADOR ELIGE EL NUMERO 0
+
+% numeros(X, 0, Z, W):-
+%   write('¡¡¡HAS GANADOO!!!').
+
+%numeros(0, Y, Z, W):-
+%    write('Has perdido...').
+
+numeros(X, Y, Z, W):-
+    %num(X),
+    %num(Y),
+    %\+  X = Y,
+    \+ X > 10,     % numero jugador 1
+    \+ X < 5,
+    \+ Y > 10,     % numero jugador 2
+    \+ Y < 5,
+    \+ Z > 5,      % dedos jugador 1
+    \+ W > 5,      % dedos jugador 2
+    T is Z + W,
+    diferencia(X, Y, T).
+
+% comprobar si ha ocurrido un empate
+diferencia(X, Y, _T):-
+    X =:= Y,
+    %\+ (X =:= T),
+    write('Ha habido un empate'), !.
+
+diferencia(X, Y, T):-
+    X < T, Y < T, Y > X,
+    write('Has perdido...'), !.
+
+diferencia(X, Y, T):-
+    Y < X, Y > T,
+    write('Has perdido...'), !.
+
+% comprobar ganador o perdedor
+diferencia(X, Y, T):-
+    T < X, Y > X,
+    write('¡¡¡HAS GANADOO!!!'), !.
+
+diferencia(X, _Y, T):-
+    T =:= X,
+    write('¡¡¡HAS GANADOO!!!'), !.
+
+diferencia(X, Y, T):-
+    T < X, Y < T,
+    write('¡¡¡HAS GANADOO!!!'), !.
+
+
+% comprobar el ganador en caso de que T > X && Y.
+diferencia(X, Y, T):-
+    X < T, Y < T,
+    X > Y,
+    write('¡¡¡HAS GANADOO!!!'), !.
+
+% Por defecto, has perdido
+
+diferencia(_X, _Y, _T) :- write('Has perdido...').
+
+/* diferencia(X, Y, T):-
+    X > T, Y > T,
+    X < Y,
+    write('Has perdido...'), !.
+*/
+
+
+%calcula la diferencia del resultado con los numeros a acercarse y los
+% manda comparar
+%diferencia(X, Y, T):-
+%    D1 is X - T,
+%    D2 is Y - T,
+%    comparar(D1, D2).
+
+% compara las diferencias para determinar el mas cercanoy por tanto al
+% ganador
+%comparar(D1, D2):-
+%    D1 > D2, % GANA
+%    write('¡¡¡HAS GANADOO!!!').
+
+%comparar(D1, D2):-
+%   D1 < D2, % PIERDE
+%   write('Has perdido...').
+
+%comparar(D1, D2):-
+%    D1 = D2,
+%    \+ D1 = 0,
+%    write('Empate').
+
+% ¿QUE OCURRE CUANDO SOBREPASA LOS DOS NUMEROS? -- GANA EL DEL NUMERO
+% MAS GRANDE
+
+
+
+
+
+
+
+
+
+
+
+
+
+

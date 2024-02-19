@@ -1,0 +1,15 @@
+@RELATION testCarEv
+
+@attribute V1 {high,low,med,vhigh}
+@attribute V2 {high,low,med,vhigh}
+@attribute V3 {2,3,4,5more}
+@attribute V4 {2,4,more}
+@attribute V5 {big,med,small}
+@attribute V6 {high,low,med}
+@ATTRIBUTE class 	{1, 2, 3, 4}
+
+@DATA
+vhigh,vhigh,2,2,small,low,?
+%
+%
+%

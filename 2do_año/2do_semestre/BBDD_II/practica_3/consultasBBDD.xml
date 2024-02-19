@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+
+
+
+<root>
+    <sakila>
+        <predefinidas>
+            SELECT MAX(length), MIN(length) FROM film
+            SELECT COUNT(DISTINCT first_name, last_name) FROM actor;
+        </predefinidas>
+        
+        <simples>
+            SELECT * FROM actor;
+            SELECT * FROM customer WHERE active = 0;
+        </simples>
+        
+        <complejas>
+           SELECT film.title FROM film 
+                INNER JOIN film_actor ON film.film_id = film_actor.film_id 
+                INNER JOIN actor ON film_actor.actor_id = actor.actor_id 
+                INNER JOIN inventory ON film.film_id = inventory.film_id 
+                INNER JOIN rental ON inventory.inventory_id = rental.inventory_id 
+                GROUP BY film.film_id 
+                HAVING COUNT(rental.rental_id) > 5;
+
+            SELECT customer.first_name, customer.last_name, COUNT(rental.rental_id) 
+                FROM customer 
+                INNER JOIN rental ON customer.customer_id = rental.customer_id 
+                GROUP BY customer.customer_id;
+   
+        </complejas>
+        
+    </sakila>
+    
+    
+    <world>
+        <predefinidas>
+            SELECT SUM(SurfaceArea) FROM country;
+            SELECT MAX(population/SurfaceArea), MIN(population/SurfaceArea) FROM country WHERE continent = 'Asia';
+
+        </predefinidas>
+        
+        <simples>
+            SELECT * FROM country;
+            SELECT * FROM city WHERE name LIKE 'S%';
+        </simples>
+            
+        <complejas>
+            SELECT country.Name
+                FROM country 
+                INNER JOIN countrylanguage ON country.Code = countrylanguage.CountryCode 
+                WHERE countrylanguage.IsOfficial = 'T' 
+                GROUP BY country.Code 
+                HAVING COUNT(countrylanguage.Language) > 3;
+            
+            SELECT country.Name, city.Name, countryLanguage.Language, countrylanguage.IsOfficial 
+                FROM country 
+                INNER JOIN city ON country.Code = city.CountryCode 
+                INNER JOIN countrylanguage ON country.Code = countrylanguage.CountryCode 
+                WHERE countrylanguage.Percentage > 50.0 
+                AND country.Name REGEXP \"^[m-z]\" 
+                ORDER BY country.Name ASC;
+        </complejas>
+    </world>
+</root>
+
