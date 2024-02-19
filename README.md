@@ -2,7 +2,7 @@
 
 ## En proceso -- Sin completar
 ### DESCRIPCIÓN:
-Este reposorio esta destinado a guardar todo el progreso realizado durante la realización de la carrera Ingeniería de Sistemas de la Información.
+Este repositorio esta destinado a guardar todo el progreso realizado durante la realización de la carrera Ingeniería de Sistemas de la Información.
 ___
 
 ## Carpetas:
