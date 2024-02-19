@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=OfertaOrdenador
+comment1.params=
+comment1.target=int\ getPrecioInicial()
+comment2.params=precioInicial
+comment2.target=void\ setPrecioInicial(int)
+comment3.params=
+comment3.target=int\ getDescuento()
+comment4.params=descuento
+comment4.target=void\ setDescuento(int)
+comment5.params=
+comment5.target=ModeloOrdenador\ getTieneOrdenadorOfertado()
+comment6.params=tieneOrdenadorOfertado
+comment6.target=void\ setTieneOrdenadorOfertado(ModeloOrdenador)
+comment7.params=
+comment7.target=int\ calcularPrecioFinal()
+comment8.params=
+comment8.target=java.lang.String\ toString()
+numComments=9

@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=OfertaOrdenador
+comment1.params=
+comment1.target=int\ getPrecioInicial()
+comment2.params=precioInicial
+comment2.target=void\ setPrecioInicial(int)
+comment3.params=
+comment3.target=int\ getDescuento()
+comment4.params=descuento
+comment4.target=void\ setDescuento(int)
+comment5.params=
+comment5.target=int\ calcularPrecioFinal()
+numComments=6

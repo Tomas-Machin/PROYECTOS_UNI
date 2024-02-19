@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ModeloOrdenador
+comment1.params=
+comment1.target=java.lang.String\ getIdentificadorDeModelo()
+comment2.params=identificadorDeModelo
+comment2.target=void\ setIdentificadorDeModelo(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getMemoriaRam()
+comment4.params=memoriaRam
+comment4.target=void\ setMemoriaRam(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getDiscoDuro()
+comment6.params=discoDuro
+comment6.target=void\ setDiscoDuro(java.lang.String)
+comment7.params=
+comment7.target=java.lang.String\ toString()
+numComments=8

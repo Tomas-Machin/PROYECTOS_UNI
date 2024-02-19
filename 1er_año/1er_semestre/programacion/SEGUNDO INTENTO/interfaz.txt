@@ -1,0 +1,111 @@
+package interfaz;
+
+import dominio.*;
+import java.io.FileNotFoundException;
+import java.io.File;
+import java.util.Scanner;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.InputMismatchException;
+
+
+/** Esta clase define el interfaz del programa
+ * @author Tomas Machin, Alberto Ruiz, Alfredo Martinez, Francisco Rodriguez
+ */
+public class Interfaz{
+
+        private static String NOMBRE_FICHERO = "lista.txt";
+        private static Scanner sc = new Scanner(System.in);
+
+        public static void procesarPeticion(String sentencia){
+                String[] palabras = sentencia.split(" ");
+                Catalogo catalogo = inicializarCatalogo();
+                printHelp();
+                System.out.println("Por favor introduzca el comando que desea realizar:");
+                String decision = sc.next();
+                int i = 0;
+                try{
+                        while(i <= 0){
+                                switch(decision){
+                                        case "add":
+                                                System.out.println("Introduzca un producto:");
+                                                String nombre = sc.next();
+                                                System.out.println("Indique su precio:");
+                                                String str = sc.next();
+                                                float precio = Float.parseFloat(str);
+                                                System.out.println("Indique la cantidad:");
+                                                int cantidad = sc.nextInt();
+                                                Productos pro = new Productos(nombre, precio, cantidad);
+                                                System.out.println(pro);
+                                                catalogo.annadirProducto(pro);
+                                                guardarCatalogo(catalogo);
+                                                i = 1;
+                                                break;
+                                        case "show":
+                                                System.out.println("  PRODUCTOS   |  PRECIO  |  CANTIDAD");
+                                                System.out.println("--------------------------------------");
+                                                System.out.println(catalogo);
+                                                i = 1;
+                                                break;
+                                        case "delete":
+                                                System.out.println("Indique la posicion del producto a borrar:");
+
+                                                break;
+                                        case "edit":
+                                                break;
+                                        case "help":
+                                                printHelp();
+                                                System.out.println("Elija el comando que quiera realizar:");
+                                                decision = sc.next();
+                                                break;
+                                        default:
+                                                System.out.println("Por favor introduzca un comando válido");
+                                                decision = sc.next();
+                                                break;
+                                }
+                        }
+                } catch(InputMismatchException e){
+                        System.out.println("Por favor introduzca un comando válido:");
+                        decision = sc.next();
+                }
+        }
+
+        private static Catalogo inicializarCatalogo(){
+                Catalogo catalogo = new Catalogo();
+                try{
+                        File file = new File(NOMBRE_FICHERO);
+                        Scanner sc = new Scanner(file);
+                        while(sc.hasNext()){
+                                String nombre = sc.next();
+                                String uno = sc.next();
+                                float precio = Float.parseFloat(uno);
+                                String dos = sc.next();
+                                int cantidad = Integer.parseInt(dos);
+                                Productos item = new Productos(nombre, precio, cantidad);
+                                catalogo.annadirProducto(item);
+                        } sc.close();
+                } catch (FileNotFoundException e){}
+                return catalogo;
+        }
+
+        private static void guardarCatalogo(Catalogo catalogo){
+                try{
+                        FileWriter fw = new FileWriter(NOMBRE_FICHERO);
+                        fw.write(catalogo.toString());
+                        fw.close();
+                        System.out.println("Se ha guardado el catálogo con éxito");
+                } catch (IOException e){
+                        System.out.println("Ha ocurrido un error al guardar el catálogo");
+                }
+        }
+
+        private static void printHelp(){
+                String ayuda = "\n\tLas operaciones posibles son las siguientes:\n" +
+                        "\t\t- Añadir producto:\n\t\t\tadd\n" +
+                        "\t\t- Mostrar catálogo:\n\t\t\tshow\n" +
+                        "\t\t- Eliminar producto:\n\t\t\tdelete\n" +
+                        "\t\t- Modificar producto:\n\t\t\tedit\n" +
+                        "\t\t- Mostrar ayuda:\n\t\t\thelp\n";
+                System.out.println(ayuda);
+        }
+}

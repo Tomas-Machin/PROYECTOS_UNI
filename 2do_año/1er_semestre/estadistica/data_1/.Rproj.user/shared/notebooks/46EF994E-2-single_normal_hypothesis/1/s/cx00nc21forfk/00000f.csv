@@ -1,0 +1,37 @@
+"0","power.t.test(
+  delta = 0.5, 
+  sd = 4.1,
+  sig.level = 0.01, # alpha
+  power = 0.9,
+  type = ""one.sample"",
+  alternative = ""one.sided""
+  )
+"
+"1","
+    "
+"1"," "
+"1","One-sample t test power calculation"
+"1"," "
+"1","
+
+"
+"1","              n = 877.9675"
+"1","
+"
+"1","          delta = 0.5"
+"1","
+"
+"1","             sd = 4.1"
+"1","
+"
+"1","      sig.level = 0.01"
+"1","
+"
+"1","          power = 0.9"
+"1","
+"
+"1","    alternative = one.sided"
+"1","
+"
+"1","
+"

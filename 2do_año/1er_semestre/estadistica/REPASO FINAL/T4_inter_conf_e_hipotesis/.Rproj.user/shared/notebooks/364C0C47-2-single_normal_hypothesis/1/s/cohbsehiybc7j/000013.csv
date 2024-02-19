@@ -1,0 +1,6 @@
+"0","print(paste(""alpha ="", alpha, ""| p(incorrectly reject H0) = "", mean(sims)))
+"
+"1","[1]"
+"1"," ""alpha = 0.01 | p(incorrectly reject H0) =  0.0074"""
+"1","
+"

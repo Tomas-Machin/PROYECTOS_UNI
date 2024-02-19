@@ -1,0 +1,5 @@
+"0","colnames(new_crypto)[, 1] = ""date""
+"
+"2","Error in colnames(new_crypto)[, 1] = ""date"" : 
+  incorrect number of subscripts on matrix
+"

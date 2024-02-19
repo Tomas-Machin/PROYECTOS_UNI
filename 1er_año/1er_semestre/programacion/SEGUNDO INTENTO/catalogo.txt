@@ -1,0 +1,47 @@
+package dominio;
+
+/** Esta clase define un catalogo de los productos queridos
+ * @author Tomas Machin, Alfredo Martinez, Alberto Ruiz, Francisco Rodriguez
+ */
+
+import interfaz.*;
+import java.util.ArrayList;
+
+public class Catalogo{
+        private ArrayList<Productos> lista = new ArrayList<>();
+
+        /** Para obtener una lista con los productos deseados
+         * @author nombre del array (lista) de la comida
+         */
+
+        public ArrayList<Productos> getLista(){
+                return lista;
+        }
+
+        public void setLista(ArrayList<Productos> lista){
+                this.lista = lista;
+        }
+
+        /** Para añadir un producto a la lista del catalogo
+         * @param añadir un producto a la lista
+         */
+
+        public void annadirProducto(Productos item){
+                lista.add(item);
+        }
+
+        public String toString(){
+                StringBuilder mensaje = new StringBuilder();
+                if(lista.size() == 0){
+                        mensaje.append("La lista está vacía");
+                } else {
+                        for(Productos item: lista){
+                                for(int i = 0; i < lista.size(); i++){
+                                        mensaje.append(i);
+                                        mensaje.append(item + "\n");
+                                }
+                        }
+                }
+                return mensaje.toString();
+        }
+}

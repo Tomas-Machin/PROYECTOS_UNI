@@ -1,0 +1,6 @@
+#! /bin/sh
+
+prefix=/usr/i686-w64-mingw32/sys-root/mingw
+exec_prefix=/usr/i686-w64-mingw32/sys-root/mingw/bin
+exit `/usr/i686-w64-mingw32/sys-root/mingw/bin/meinproc4 --check --stdout $@ > /dev/null`
+

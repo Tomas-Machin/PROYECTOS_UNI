@@ -1,0 +1,33 @@
+"0","  # 2.- encontrarun estadistico...
+  # se deben cumplir dos condiciones para usar t.test: 
+    # poblacion infinita --> independencia entre muestras     
+      # la poblacion es ersona q pueden llegar a usar un producto de perdida de 
+      # la muestra es pequeña con respecto a esta poblacion
+    # distribucion normal --> es razonable en vista al histograma
+  library(""tidyverse"")
+"
+"2","Registered S3 methods overwritten by 'dbplyr':
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+"
+"2","── [1mAttaching packages[22m ─────────────────────────────────────────────────────────── tidyverse 1.3.2 ──"
+"2","[32m✔[39m [34mggplot2[39m 3.4.0      [32m✔[39m [34mdplyr  [39m 1.0.10
+[32m✔[39m [34mtibble [39m 3.1.8      [32m✔[39m [34mstringr[39m 1.4.1 
+[32m✔[39m [34mtidyr  [39m 1.2.1      [32m✔[39m [34mforcats[39m 0.5.2 
+[32m✔[39m [34mpurrr  [39m 0.3.4      "
+"2","Warning: package ‘ggplot2’ was built under R version 4.2.2"
+"2","── [1mConflicts[22m ────────────────────────────────────────────────────────────── tidyverse_conflicts() ──
+[31m✖[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
+[31m✖[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()"
+"0","  # 2.- encontrarun estadistico..."
+"0","  # se deben cumplir dos condiciones para usar t.test: "
+"0","    # poblacion infinita --> independencia entre muestras     "
+"0","      # la poblacion es ersona q pueden llegar a usar un producto de perdida de "
+"0","      # la muestra es pequeña con respecto a esta poblacion"
+"0","    # distribucion normal --> es razonable en vista al histograma"
+"0","  library(""tidyverse"")"
+"0","  ggplot(pharma_weight_loss, aes(x = weight_loss_Kg)) + geom_histogram(bins = nbins)"
+"2","Error in ggplot(pharma_weight_loss, aes(x = weight_loss_Kg)) : 
+  object 'pharma_weight_loss' not found
+"
