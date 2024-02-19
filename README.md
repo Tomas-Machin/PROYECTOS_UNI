@@ -32,6 +32,7 @@ ___
    1. 1er_semestre
       1. IA - (Inteligencia Artificial)
       2. ISO - (Ingeniería del Software)
+         1. Konguitos_casino -- *Proyecto remarcable*
       3. curso_de_tarjetas_inteligentes_DIUSFRAMI
    2. 2er_semestre
       1. programacion_en_entornos_distribuidos
