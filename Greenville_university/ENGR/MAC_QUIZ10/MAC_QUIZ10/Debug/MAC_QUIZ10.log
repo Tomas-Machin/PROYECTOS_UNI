@@ -1,8 +1,0 @@
-﻿  MAC_QUIZ10.cpp
-Source.obj : error LNK2005: ya se definió _main en MAC_QUIZ10.obj
-Source.obj : error LNK2019: símbolo externo "void __cdecl getLengthAndWidth(double &,double &)" (?getLengthAndWidth@@YAXAAN0@Z) sin resolver al que se hace referencia en la función _main
-Source.obj : error LNK2019: símbolo externo "double __cdecl calcPerimeter(double,double)" (?calcPerimeter@@YANNN@Z) sin resolver al que se hace referencia en la función _main
-Source.obj : error LNK2019: símbolo externo "void __cdecl displayData(double,double,double,double)" (?displayData@@YAXNNNN@Z) sin resolver al que se hace referencia en la función _main
-    Sugerencia sobre los símbolos definidos que podrían coincidir:
-      "void __cdecl displayData(double)" (?displayData@@YAXN@Z)
-C:\Users\machi\Downloads\GU EEUU\ENGR\MAC_QUIZ10\Debug\MAC_QUIZ10.exe : fatal error LNK1120: 3 externos sin resolver

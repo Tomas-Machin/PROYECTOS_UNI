@@ -1,4 +1,0 @@
-﻿  Ex_3.3_9.cpp
-C:\Users\machi\source\repos\Ex_3.3_9\Ex_3.3_9\Ex_3.3_9.cpp(7,27): warning C4305: '=': truncamiento de 'double' a 'float'
-C:\Users\machi\source\repos\Ex_3.3_9\Ex_3.3_9\Ex_3.3_9.cpp(9,56): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-  Ex_3.3_9.vcxproj -> C:\Users\machi\source\repos\Ex_3.3_9\Debug\Ex_3.3_9.exe
