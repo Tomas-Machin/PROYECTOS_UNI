@@ -1,1 +1,0 @@
-{"frames":[{"func":"ggplot(pharma_weight_loss, aes(x = weight_loss_Kg))","file":"","line_number":0,"end_line_number":0,"character_number":0,"end_character_number":0}],"message":"Error in ggplot(pharma_weight_loss, aes(x = weight_loss_Kg)) : \n  object 'pharma_weight_loss' not found\n"}
