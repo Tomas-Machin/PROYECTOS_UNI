@@ -1,0 +1,14 @@
+Manual de usuario.
+
+Primero ha de ejecutarse le servidor: make server
+Luego el cliente puede realizar su conexion y peticion: make client
+Le pedira introducir el path al archivo deseado (introducir sin comillas)
+
+En caso de estar el socket ocupado:, es necesario liberarlo por lo que debera ejecutar los siguientes comandos:
+    ps aux | grep :65432 -> para saber el PID del proceso que esta en ejecucion (segundo valor)                                                             kill <PID> -> Siendo <PID> el PID mostrado por el comando anterior      
+Ya podra repetir el proceso de nuevo:
+    make server
+    make client
+    ps aux | grep :65432
+    kill <PID>
+    ...

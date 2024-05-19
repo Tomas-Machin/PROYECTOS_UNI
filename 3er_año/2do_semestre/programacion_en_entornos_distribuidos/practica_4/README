@@ -1,0 +1,6 @@
+Manual de instrucciones:
+
+	- Primero debe ejecutar el servidor: make server
+	- Luego debe ejecutar el cliente: make client
+
+El servidor y el cliente deberan imprimir la fecha y hora de la solicitud.
