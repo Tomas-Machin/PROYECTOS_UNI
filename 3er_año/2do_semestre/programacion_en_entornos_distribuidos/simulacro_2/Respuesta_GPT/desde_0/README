@@ -1,5 +1,7 @@
 Manual de instrucciones:
 
+NO FUNCIONAL
+
 Apartado de tests (TDD):
 	- Ubicado en la carpeta 'tests'.
 	- Ejecutar los tests -> python -m unittest discover 
