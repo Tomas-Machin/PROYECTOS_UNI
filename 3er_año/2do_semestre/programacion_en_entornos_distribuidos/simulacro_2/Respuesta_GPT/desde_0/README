@@ -1,0 +1,5 @@
+Manual de instrucciones:
+
+Apartado de tests (TDD):
+	- Ubicado en la carpeta 'tests'.
+	- Ejecutar los tests -> python -m unittest discover 
