@@ -1,0 +1,22 @@
+Manual de usuario.
+
+Para las noticias:
+Para la ejecucion de los comandos es necesario que se realicen en la carpeta de 'noticias'
+    - Primero se ejecuta el servidor: make server | python3 server.py
+    - Luego se ejecuta el cliente: make client | python3 client.py
+
+    Al cliente se le daran diferentes opciones a realizar:
+    - El cliente puede recibir noticias ya escritas si escribe 'RECIBIR'
+    - Puede escribir una noticia si escribe 'ESCRIBIR'
+    - Puede desconectarse si escribe 'EXIT'
+
+(SOLO ES CAPAZ DE REALIZAR UNA - SE QUEDA PILLADO DESPUES DE REALIZAR UNA SEGUNDA PETICION AL SERVIDOR)
+Aunque el cliente solo sea capaz de realizar una accion, si decide escribir una noticia, esta se subira al servidor.
+Por lo que los demas clientes podran ver el contenido de esa noticia.
+
+Las noticias no son persistentes - se borran al cerrarse el servidor.
+
+ERRORES
+Al leer una noticia se dispara un mensaje por consola de eleccion ivalida que no deberia salir.
+no funciona el broadcast (solo sale al escritor de la noticia)
+se queda pillado al escribir una noticia
