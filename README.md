@@ -13,30 +13,50 @@ ___
 ### Jerarquía / Organización:
  Las carpetas tienen una breve aclaración en caso de ser necesario (ej.: de acrónimos a nombre completo).
 
-1. Universidad CEU San Pablo - Madrid.
-   - 1er_año -- Primer curso 
-    - 1er_semestre
-         1. INI - (Introducción a la Ingeniería)
-         2. programacion
-    - 2er_semestre
-         1. modelos_de_computacion
-         2. programacion_II
-   - 2er_año 
-    - 1er_semestre
-         1. BBDD - (Bases de datos I)
-         2. estadistica
-         3. MTP - (Metodologías y tecnologías de la programación)
-    - 2er_semestre
-         1. BBDD_II - (Bases de datos II)
-         2. SO - (Sistemas Operativos)
-   - 3er_año 
-    - 1er_semestre
-         1. IA - (Inteligencia Artificial)
-         2. ISO - (Ingeniería del Software)
-            1. Konguitos_casino -- *Proyecto remarcable*
-         3. curso_de_tarjetas_inteligentes_DIUSFRAMI
-    - 2er_semestre
-         1. programacion_en_entornos_distribuidos
-      
-2. Greenville_university - Illinois, EEUU. --> Año cursado en el extranjero (Primer curso)
-   1. ENGR - (Engineering)
+# Estudios Universitarios
+
+## Universidad CEU San Pablo – Madrid
+
+### 1er Año – Primer Curso
+
+#### 1er Semestre
+- **INI** – Introducción a la Ingeniería  
+- **Programación**
+
+#### 2º Semestre
+- **Modelos de Computación**
+- **Programación II**
+
+---
+
+### 2º Año
+
+#### 1er Semestre
+- **BBDD I** – Bases de Datos I  
+- **Estadística**  
+- **MTP** – Metodologías y Tecnologías de la Programación
+
+#### 2º Semestre
+- **BBDD II** – Bases de Datos II  
+- **SO** – Sistemas Operativos
+
+---
+
+### 3er Año
+
+#### 1er Semestre
+- **IA** – Inteligencia Artificial  
+- **ISO** – Ingeniería del Software  
+  - *Proyecto remarcable*: **Konguitos Casino**  
+- **Curso de Tarjetas Inteligentes – DIUSFRAMI**
+
+#### 2º Semestre
+- **Programación en Entornos Distribuidos**
+
+---
+
+## Greenville University – Illinois, EE. UU.  
+*Año cursado en el extranjero (equivalente a 1er curso)*
+
+- **ENGR** – Engineering
+
