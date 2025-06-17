@@ -13,8 +13,6 @@ ___
 ### Jerarquía / Organización:
  Las carpetas tienen una breve aclaración en caso de ser necesario (ej.: de acrónimos a nombre completo).
 
-# Estudios Universitarios
-
 ## Universidad CEU San Pablo – Madrid
 
 ### 1er Año – Primer Curso
